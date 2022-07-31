@@ -34,8 +34,3 @@ class DataBase:
 
         return cur
 
-# database = DataBase()
-# table = database.create_table()
-# cur = database.insert_in_table(table, ('name', 1, 2, True))
-# for row in cur.execute('SELECT * FROM books ORDER BY price'):
-#     print(row)
