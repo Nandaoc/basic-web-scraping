@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from database import DataBase
 
 
 class Scraper:
@@ -31,3 +32,9 @@ class Scraper:
             titles[index].append(price.text)
 
         return titles
+
+    def insert_in_database(self, data_list):
+        database = DataBase()
+        cur = database.create_table()
+        for data in data_list:
+            database.insert_in_table(cur, tuple(data))
