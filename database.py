@@ -27,7 +27,7 @@ class DataBase:
         column_values = '''
                 INSERT INTO books
                 VALUES (
-                    ?, ?, ?, ?
+                    ?, ?
                 )
             '''
         cur.execute(
