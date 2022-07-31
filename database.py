@@ -24,7 +24,6 @@ class DataBase:
         return cur
 
     def insert_in_table(self, cur, name, price, rating, in_stock):
-        # cur = self.create_table()
         column_values = '''
                 INSERT INTO books
                 VALUES (
