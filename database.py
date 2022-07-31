@@ -23,17 +23,16 @@ class DataBase:
 
         return cur
 
-    def insert_in_table(self, cur, name, price, rating, in_stock):
+    def insert_in_table(self, cur, data):
         column_values = '''
                 INSERT INTO books
                 VALUES (
                     ?, ?, ?, ?
                 )
             '''
-        data_tuple = (name, price, rating, in_stock)
         cur.execute(
            column_values,
-           data_tuple
+           data
         )
         self.con.commit()
 
