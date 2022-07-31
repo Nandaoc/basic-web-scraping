@@ -33,4 +33,3 @@ class DataBase:
         self.con.commit()
 
         return cur
-
